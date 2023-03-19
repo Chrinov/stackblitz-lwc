@@ -1,12 +1,16 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, track, api } from 'lwc';
 
-export default class extends LightningElement {
-    counter = 0;
+export default class Parent extends LightningElement {
+  @track isChecked = false;
 
-    increment() {
-        this.counter++;
-    }
-    decrement() {
-        this.counter--;
-    }
+  handleParentChange(event) {
+    console.log('handleParentChange')
+    this.isChecked = event.target.checked;
+    const childComponent = this.template.querySelector('x-child');
+    childComponent.updateChildCheckboxValue(this.isChecked);
+  }
+
+  handleChildChange(event) {
+    this.isChecked = event.detail.value;
+  }
 }

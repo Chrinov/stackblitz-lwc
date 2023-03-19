@@ -1,4 +1,10 @@
 <template>
-    <h5>Child:</h5>
-    <x-child></x-child>
+  <div>
+    <h1>Parent Component</h1>
+    <label>
+      <input type="checkbox" onchange={handleParentChange} checked={isChecked} />
+      Parent Checkbox
+    </label>
+    <x-child checked={isChecked} onchildchange={handleChildChange}></x-child>
+  </div>
 </template>
