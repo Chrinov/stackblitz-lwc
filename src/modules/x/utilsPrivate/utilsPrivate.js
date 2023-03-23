@@ -77,16 +77,6 @@ export { isChrome, isIE11, isSafari } from './browser';
 export { ContentMutation } from './contentMutation';
 export { observePosition } from './observers';
 export { hasOnlyAllowedVideoIframes } from './videoUtils';
-export {
-    addToDate,
-    dateTimeObjectFrom,
-    getStartOfWeek,
-    getWeekday,
-    formatDateFromStyle,
-    getWeekNumber,
-    numberOfUnitsBetweenDates,
-    removeFromDate
-} from './dateTimeUtils';
 import { smartSetAttribute } from './smartSetAttribute';
 
 export function synchronizeAttrs(element, values) {
