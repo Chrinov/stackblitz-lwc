@@ -3,5 +3,10 @@
         {
             "dir": "src/modules"
         }
-    ]
+    ],
+    "resources":{
+        "from": "node_modules/@salesforce-ux/design-system/assets",
+        "to": "dist/resources/slds"
+    }
+    
 }
