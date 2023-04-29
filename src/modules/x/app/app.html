@@ -1,21 +1,18 @@
 <template>
+  <input
+    type="checkbox"
+    onchange={handleDinoChange}
+    checked={dinoCheckbox}
+  />
+  BULK
 
-<input type="checkbox" onchange={handleDinoChange} checked={dinoCheckbox} /> BULK
-
-<lightning-accordion active-section-name={activeSectionname}>
-        <lightning-accordion-section>
-            
-        </lightning-accordion-section>
+  <lightning-accordion active-section-name={activeSectionname}>
+    <lightning-accordion-section> </lightning-accordion-section>
     <lightning-accordion-section>
-           <div style="height: 300px;">
-        <lightning-datatable
-                key-field="id"
-                data={data}
-                columns={columns}>
+      <div style="height: 300px">
+        <lightning-datatable key-field="id" data={data} columns={columns}>
         </lightning-datatable>
-    </div>
-
+      </div>
     </lightning-accordion-section>
-</lightning-accordion>
-
+  </lightning-accordion>
 </template>
