@@ -6,10 +6,6 @@
         {
             "npm": "lightning-base-components"
         }
-    ],
-    "resources":{
-        "from": "node_modules/@salesforce-ux/design-system/assets",
-        "to": "dist/resources/slds"
-    }
+    ]
     
 }
