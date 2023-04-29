@@ -1,9 +1,21 @@
 <template>
-  <h1>LWC Stackblitz</h1>
-  <hr />
 
-  <h3>Parent:</h3>
-  <x-parent></x-parent>
+<input type="checkbox" onchange={handleDinoChange} checked={dinoCheckbox} /> BULK
 
-  <x-spinner alternative-text="Loading" size="medium"></x-spinner>
+<lightning-accordion active-section-name={activeSectionname}>
+        <lightning-accordion-section>
+            
+        </lightning-accordion-section>
+    <lightning-accordion-section>
+           <div style="height: 300px;">
+        <lightning-datatable
+                key-field="id"
+                data={data}
+                columns={columns}>
+        </lightning-datatable>
+    </div>
+
+    </lightning-accordion-section>
+</lightning-accordion>
+
 </template>
